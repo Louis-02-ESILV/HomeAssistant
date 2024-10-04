@@ -1,11 +1,14 @@
 #Node Installation
 
-wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
-tar -xzf node-v8.9.0-linux-armv6l.tar.gz
-cd node-v6.11.1-linux-armv6l/
-sudo cp -R * /usr/local/
-node -v
-npm -v
+# installe fnm (Fast Node Manager)
+curl -fsSL https://fnm.vercel.app/install | bash
+# activer le fnm
+source ~/.bashrc
+# télécharger et installer Node.js
+fnm use --install-if-missing 22
+# vérifie que la bonne version de Node.js est présente dans l'environnement
+node -v # devrait imprimer `v22.9.0`
+npm -v # devrait imprimer `10.8.3`
 
 #MagicMirror Installation
 
